@@ -24,6 +24,7 @@
 
 * **Repository Structure**
 
+```bash
 m0609_semicon_task_handler/
 ├── config/
 │   └── pose_config.yaml         # [Config] 로봇 티칭 좌표 및 파라미터 관리
@@ -48,6 +49,7 @@ m0609_semicon_task_handler/
 ├── requirements.txt             # Python 의존성 목록
 ├── package.xml
 └── README.md
+```
 
 ---
 
@@ -74,18 +76,27 @@ m0609_semicon_task_handler/
 ---
 
 ## 📦 5. 의존성 (Dependencies)
-requirements.
+[requirements.txt](requirements.txt)
+
+---
 
 ## 📦 6. 실행순서
-step1. ros2 패키지 빌드
-step2. 노드 실행
-#bringup
+```bash
+# step1. ros2 패키지 빌드
+colcon build --packages-select m0609_semicon_task_handler
+
+# step2. 노드 실행
+# 1. bringup
 ros2 launch dsr_bringup2 dsr_bringup2_rviz.launch.py mode:=real host:=192.168.1.100 port:=12345 model:=m0609
-#task_node
+
+# 2. task_node
 ros2 run m0609_semicon_task_handler task_node
-#ui_node
+
+# 3. ui_node
 ros2 run m0609_semicon_task_handler ui_node
-step3. ui 페이지 로드 및 실행
-cd /frontend
-open index.html
+
+# step3. ui 페이지 로드 및 실행
+cd frontend/
+# index.html 파일을 브라우저에서 실행 (Drag & Drop or Double Click)
+```
 
