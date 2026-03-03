@@ -26,29 +26,45 @@
 
 ```bash
 m0609_semicon_task_handler/
-├── config/
-│   └── pose_config.yaml         # [Config] 로봇 티칭 좌표 및 파라미터 관리
-├── docs/images/                 # [Docs] 시스템 아키텍처 및 데모 자료
-│   ├── 1min_demo_video.mp4
-│   ├── flowchart.png
-│   ├── node_architecture.png
-│   ├── system_architecture.png
-│   └── workspace.jpeg
-├── force_insertion_algorithm/   # [R&D] 힘 제어 기반 삽입 알고리즘 (통합 보류)
-│   ├── insert_card_slot.py      # 자체 궤적 생성 알고리즘
-│   └── README.md                # 트러블슈팅 리포트 (하드웨어 한계 분석)
-├── frontend/                    # [Web UI] 통합 관제 대시보드
-│   ├── index.html
-│   ├── css/
-│   └── js/                      # Firebase 연동 및 UI 로직
-├── m0609_semicon_task_handler/  # [ROS2] 메인 제어 패키지
-│   ├── hw_node/
-│   │   └── hw_node_force.py     # ★ Monitor: 하드웨어 상태/에러 병렬 감시
-│   ├── task_node.py             # ★ Core: 145개 공정 시퀀스 메인제어
-│   ├── ui_node.py               # ★ Bridge: Web UI <-> ROS2 통신 중계
-├── requirements.txt             # Python 의존성 목록
-├── package.xml
-└── README.md
+.
+├── docs
+│   ├── images
+│   │   ├── 1min_demo_video.mp4
+│   │   ├── flowchart.png
+│   │   ├── node_architecture.png
+│   │   ├── system_architecture.png
+│   │   └── workspace.jpeg
+│   └── index.html
+├── README.md
+├── requirements.txt
+└── src
+    ├── config
+    │   └── pose_config.yaml
+    ├── force_insertion_algorithm
+    │   ├── insert_card_slot.py
+    │   └── README.md
+    ├── frontend
+    │   ├── css
+    │   │   └── dashboard.css
+    │   └── index.html
+    ├── LICENSE
+    ├── m0609_semicon_task_handler
+    │   ├── hw_node
+    │   │   ├── hw_node_force.py
+    │   │   └── __init__.py
+    │   ├── __init__.py
+    │   ├── task_node.py
+    │   └── ui_node.py
+    ├── package.xml
+    ├── resource
+    │   └── m0609_semicon_task_handler
+    ├── setup.cfg
+    ├── setup.py
+    └── test
+        ├── test_copyright.py
+        ├── test_flake8.py
+        └── test_pep257.py
+
 ```
 
 ---
