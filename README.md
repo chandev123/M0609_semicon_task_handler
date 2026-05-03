@@ -1,4 +1,4 @@
-# M0609_semicon_task_handler
+# semicon_handler
 
 **반도체 Task Handler 로봇 자동화 공정 (ROS2 기반 제어 및 통합 모니터링 시스템)**
 
